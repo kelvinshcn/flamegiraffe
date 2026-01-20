@@ -1,8 +1,10 @@
 "use client";
 
 import { useState, useCallback, useRef } from "react";
-import FlameGraph from "@/components/FlameGraph";
+import dynamic from "next/dynamic";
 import { parseFoldedStacks, FlameGraphNode } from "@/lib/flamegraph";
+
+const FlameGraph = dynamic(() => import("@/components/FlameGraph"), { ssr: false });
 
 export default function Home() {
   const [data, setData] = useState<FlameGraphNode | null>(null);
