@@ -1,0 +1,7 @@
+root;app;main;startup 10
+root;app;main;calculate 50
+root;app;main;render 20
+root;app;worker;process 30
+root;app;worker;save 10
+root;kernel;sys_read 5
+root;kernel;sys_write 5

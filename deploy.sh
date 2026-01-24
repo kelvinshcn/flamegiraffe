@@ -16,6 +16,9 @@ if [ $? -ne 0 ]; then
     exit 1
 fi
 
+# Create .nojekyll to allow _next directory on GitHub Pages
+touch out/.nojekyll
+
 # 2. Clone the destination repository
 echo "📥 Cloning destination repository..."
 git clone --depth 1 "$REPO_URL" "$TEMP_DIR"
